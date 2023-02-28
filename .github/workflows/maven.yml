@@ -27,8 +27,10 @@ jobs:
         java-version: '8'
         distribution: 'temurin'
         cache: maven
+    - name: List
+      run: ls
     - name: Build with Maven
-      run: mvnw package
+      run: ./mvnw test
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
     - name: Update dependency graph
